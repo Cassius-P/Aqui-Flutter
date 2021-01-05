@@ -1,16 +1,48 @@
-# fl
+# Flutter Aqui
 
-fl test
+Progressive Web App for [Aqui](https://aqui.e-node.net)
 
-## Getting Started
+## Installation
 
-This project is a starting point for a Flutter application.
+Flutter SDK & Dart
 
-A few resources to get you started if this is your first Flutter project:
+* Flutter  1.22.3
+* Dart 2.10.3
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Android SDK
+* API Level 28-30
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Dart is automatically installed during Flutter SDK installation
+
+## Configuration
+
+```bash
+flutter config --android-sdk path/to/android/sdk # set path to Android SDk for Flutter
+```
+
+```bash
+flutter doctor # check flutter config
+```
+**Expected result :**
+```bash
+[√] Flutter (Channel unknown, 1.22.3, on Microsoft Windows [version 10.0.18363.1256], locale fr-FR)
+
+[√] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+[!] Android Studio (version 4.1.0)
+    X Flutter plugin not installed; this adds Flutter specific functionality.
+    X Dart plugin not installed; this adds Dart specific functionality.
+[√] Connected device (1 available)
+```
+
+## Run
+Once your mobile device is connected run 
+```bash
+flutter run
+```
+```bash
+Launching lib\main.dart on M2003J15SC in debug mode...
+Running Gradle task 'assembleDebug'...
+Running Gradle task 'assembleDebug'... Done                        20,7s
+√ Built build\app\outputs\flutter-apk\app-debug.apk.
+Installing build\app\outputs\flutter-apk\app.apk...                 8,9s
+```
