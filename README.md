@@ -46,3 +46,28 @@ Running Gradle task 'assembleDebug'... Done                        20,7s
 √ Built build\app\outputs\flutter-apk\app-debug.apk.
 Installing build\app\outputs\flutter-apk\app.apk...                 8,9s
 ```
+
+## Build
+To build your app for Android you need generated Keystore
+
+On Mac/Linux, use the following command:
+```bash
+keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
+```
+
+On Windows, use : 
+
+```bash
+keytool -genkey -v -keystore c:\Users\USER_NAME\key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key
+```
+
+Reference the keystore from the app and configure the gradle signature
+https://flutter.dev/docs/deployment/android => for more infos
+
+Then build your app using the wished format 
+```bash
+flutter build apk | appbundle | bundle
+```
+
+Once the build completed, get your file in <br>
+**/build/app/outputs/flutter-apk/your_file**
